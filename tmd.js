@@ -105,11 +105,11 @@
     background: var(--amber);
     color: var(--navy);
     font-family: var(--body, sans-serif);
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 700;
     text-align: center;
     text-decoration: none;
-    padding: 1rem;
+    padding: 1.25rem;
     letter-spacing: 0.03em;
     box-shadow: 0 -2px 12px rgba(0,0,0,0.15);
   `;
