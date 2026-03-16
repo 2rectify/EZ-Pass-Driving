@@ -122,7 +122,9 @@
     const nearFooter = footer
       ? window.scrollY + window.innerHeight >= footer.offsetTop - 80
       : false;
-    sticky.style.display = (isMobile && !nearFooter) ? 'block' : 'none';
+    const show = (isMobile && !nearFooter);
+    sticky.style.display = show ? 'block' : 'none';
+    document.body.style.paddingBottom = show ? '64px' : '0';
   }
 
   window.addEventListener('scroll', updateStickyVisibility, { passive: true });
