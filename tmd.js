@@ -58,8 +58,6 @@
           ${instructor.name}
         </div>
         <a href="${instructor.bookingLink}"
-           target="_blank"
-           rel="noopener"
            class="btn-primary"
            style="display:block;text-align:center;padding:0.85rem;">
           📅 Book With ${instructor.name}
