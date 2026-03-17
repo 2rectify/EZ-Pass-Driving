@@ -379,6 +379,12 @@ nav {
   flex-shrink: 0;
   margin-top: 0.1rem;
 }
+/* When a checklist item opens with a strong label, stack it above the description */
+.checklist li strong {
+  display: block;
+  color: var(--navy);
+  margin-bottom: 0.15rem;
+}
 
 /* ════════════════════════════════
    LESSON CARDS (home page)
@@ -690,6 +696,72 @@ nav {
   transition: all 0.2s;
 }
 .nearby-link:hover { border-color: var(--amber); color: var(--navy); }
+
+/* ════════════════════════════════
+   LOCATIONS INDEX PAGE
+════════════════════════════════ */
+.loc-region {
+  border-bottom: 1px solid var(--lightgrey);
+  padding: 2rem 0;
+}
+.loc-region:last-of-type { border-bottom: none; }
+
+.loc-region-heading {
+  font-family: var(--condensed);
+  font-size: clamp(1.15rem, 3vw, 1.35rem);
+  font-weight: 800;
+  color: var(--navy);
+  margin-bottom: 0.9rem;
+  line-height: 1.1;
+}
+.loc-region-heading a {
+  color: var(--navy);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.loc-region-heading a:hover { color: var(--amber); }
+.loc-region-heading a .loc-arrow {
+  display: inline-block;
+  color: var(--amber);
+  font-size: 0.85rem;
+  margin-left: 0.3rem;
+  transition: transform 0.2s;
+}
+.loc-region-heading a:hover .loc-arrow { transform: translateX(3px); }
+
+.loc-pills { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+
+/* inactive pill — no page yet */
+.loc-pill {
+  display: inline-block;
+  font-size: 0.8rem;
+  color: var(--grey);
+  background: var(--white);
+  border: 1px solid var(--lightgrey);
+  border-radius: 20px;
+  padding: 0.3rem 0.85rem;
+  cursor: default;
+  user-select: none;
+}
+
+/* active pill — page is live, acts as a link */
+a.loc-pill--active {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  background: var(--amber);
+  color: var(--navy);
+  border: 1px solid var(--amber);
+  border-radius: 20px;
+  padding: 0.3rem 0.85rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+a.loc-pill--active:hover {
+  background: var(--amber2);
+  border-color: var(--amber2);
+}
 
 /* ════════════════════════════════
    FOOTER
